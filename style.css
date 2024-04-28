@@ -1,16 +1,15 @@
-/* * { border: 1px solid red; }  */
+* { border: 1px solid red; } 
    
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif;}
     
 .w3-row-padding img {margin-bottom: 12px}
 
 /* Set the width of the sidebar to 120px */
-nav {display:block;}
+nav { display:block; }
 
-p {
-    margin-top:15px;
-    margin-bottom:15px;
-}
+p { margin-top:15px; margin-bottom:15px;}
+
+/* .anchor {padding-top: 70px; margin-top: -70px;} anchor link offset positioning */
 
 .sideBar {
     display:block;
@@ -45,16 +44,19 @@ p {
 .topBar
 {
     display:block;
+    position:fixed;
+    z-index: 1;
     width:100%;
     max-height:0px;
     transition: max-height .7s;
     box-sizing: inherit;
-    opacity: 90%;
+    opacity: 80%;
     background-color: black;
     overflow:hidden;
     text-align: center !important;
     font-size:12px;
 }
+.topBar:hover{opacity:100%;}
 
 .topBar .topBarItem
 {
@@ -74,11 +76,14 @@ p {
     text-align: center;
     cursor: pointer;
 }
+.topBar .topBarItem:hover{background-color: rgb(188, 188, 188); color:#282828; font-weight:bold;}
 
 .contentPane
 {
     margin-left: 135px; /* 120px (navPane margin) + 15px (contentPane margin) */
-    transition: margin-left .4s; 
+    margin-right: 15px;
+    transition: margin-left .7s; 
+    
 }
 
 @media (max-width: 650px) /*When screen gets smaller than 650px*/
