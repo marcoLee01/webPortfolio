@@ -3,136 +3,369 @@
   <head>
     <title>Marco's Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <script src="https://kit.fontawesome.com/e6d9dfd529.js" crossorigin="anonymous"></script>
-    <style>
-      .w3-sidebar {width: 120px;background: #222;}
-    </style>
   </head>
-  <body class="w3-black">
+  <body>
 
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav class="sideBar">
       <!-- Avatar image in top left corner -->
-      <img src="/assets/personalLogoAltWhite.png" style="margin: 10px; width:60%">
+      <img class="logo" src="/assets/personalLogoAltWhite.png" alt="Personal Brand Logo">
       <a href="#" class="sideBarItem">
-        <i class="fa-solid fa-house" style="font-size:200%; padding-top:5px;"></i>
+        <i class="fa-solid fa-house" style="font-size:25px; padding-top:5px;"></i>
         <div style="padding-top:5px;">HOME</div>
       </a>
-
-      <!-- <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-user w3-xxlarge"></i>
-        <p>ABOUT</p>
+      <a href="#about" class="sideBarItem">
+        <i class="fa-solid fa-user" style="font-size:25px; padding-top:5px;"></i>
+        <div style="padding-top:5px;">ABOUT</div>
       </a>
-      <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-eye w3-xxlarge"></i>
-        <p>PHOTOS</p>
+      <a href="#projects" class="sideBarItem">
+        <i class="fa-solid fa-list-check" style="font-size:25px; padding-top:5px;"></i>
+        <div style="padding-top:5px;">PROJECTS</div>
       </a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-envelope w3-xxlarge"></i>
-        <p>CONTACT</p>
-      </a>  -->
+      <a href="#education" class="sideBarItem">
+        <i class="fa-solid fa-graduation-cap" style="font-size:25px; padding-top:5px;"></i>
+        <div style="padding-top:5px;">EDUCATION</div>
+      </a>
+      <a href="#skills" class="sideBarItem">
+        <i class="fa-solid fa-screwdriver-wrench" style="font-size:25px; padding-top:5px;"></i>
+        <div style="padding-top:5px;">SKILLS</div>
+      </a>
     </nav>
 
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <div class="topBar">
+      <img src="/assets/personalLogoAltWhite.png" style="margin:5px; width:25px; height:25px" alt="Personal Brand Logo">
       <a href="#" class="topBarItem">HOME</a>
       <a href="#about" class="topBarItem">ABOUT</a>
-      <a href="#" class="topBarItem">PROJECTS</a>
-      <a href="#" class="topBarItem">SKILLS</a>
+      <a href="#projects" class="topBarItem">PROJECTS</a>
+      <a href="#education" class="topBarItem">EDUCATION</a>
+      <a href="#skills" class="topBarItem">SKILLS</a>
     </div>
 
     <!-- Page Content -->
     <div class="contentPane">
       <!-- Header/Home -->
-      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo">Hi! I'm Marco.</h1>
+      <header class="mainHeader" id="home">
+        <h1 class="intro">Hi! I'm Marco.</h1>
         <div style="vertical-align: middle;"> 
-          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/images/2/5/terminal/prompt.gif"></img> 
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/images/2/5/terminal/prompt.gif" alt="Terminal Pointer">
           <span style="vertical-align: middle;"> Fullstack Developer with specialization in Cybersecurity. </span>
         </div>
-        <img src="/assets/profile.png" alt="Image of Marco" style="width:20%; min-width:200px; margin:20px;">
+        <img class="avatar" src="/assets/profile.png" alt="Image of Marco">
+
+        <p><span class="blinker3">> </span><a class="hoverLink" href="https://www.linkedin.com/ambry/?x-li-ambry-ep=AQJ1VgsaTuFY_AAAAZUoNZHSyk6lWk832j5i8XZBOt9PtCNV7knX2y4-Wr53BSMg1C5x7uMDqdNCyIOI87POV9PauVzaSQV4v0P_QipOnYzsqow0jA2LZ2DjDKTKFMUalXmQBY5eu1OFiwltuAGFkWERa7-MOuFd35yQEzyJz32qcOVF0nZI_57q7QMWF99aj1IWX0kTQcq3jbTRZX1wKLJQgAlr8EsL5WpdEhXNE8Nzn2_os-pDARIFLzzWTwwhOqMUlpnGR63dB3vPsOATF6qSRpXMfygUAKJlOxkJng2V2mCzNYFk15gIDWXD-6gFqaS3kGheevQ0JKRHPHG0mqxQm1YBeRKIssBqEtauWMuKsL951fUz2GCjnLFEd_Hc8bsImEHVT2CGLDv15WGJOvzvv-ZSnb_9bcJkAtrENTcEc-1mL4Do9thCTZu1Cl_FSqkmKIucS5SSibCa-OX3EUVD7350561Rhz6-lzW59tgod2_jHIkm3A4ZUfYt4Me18nOgVyKOTFh7dxhUZ4o5RsOYaZnXsfl96ybrtH_wSA9HhEot6HQ8oGhpIx_PJZS1dVga2pQ">Click me to obtain a copy of my resume!</a><span class="blinker3"> <</span></p>
       </header>
 
-      <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey" id="about">
+      <!-- Main Page Content -->
+      <div class="contentBox">
         
-        <h2 class="w3-text-light-grey"> Biography<span class="blinker1">_</span> </h2>
-        <hr style="width:200px" class="w3-opacity">
-        <p>
-          I'm a Bachelor of Computer Science graduate specializing in Cybersecurity. I am extremely passionate about technology and is always willing to learn and explore 
-          its vast world to solve complex problems and build sophisticated systems. My ultimate goal is to embark on a challenging yet rewarding path in Software Engineering.
-          I am well-equipped with strong programming skills in various languages such as Python, Java, JavaScript, C++ and I am currently picking up C# to build a web application with .NET framework as a personal project.
-          On top of that, I am also versed in application security and security best practices to develop efficient and highly secure applications.
+        <!-- About -->
+        <h2 style="color:rgb(255, 255, 255)" id="about"> Biography<span class="blinker1">_</span> </h2>
+        <hr style="width:200px; opacity: 80%;">
+        <p style="font-size: 18px; text-align:left;">
+          I am a proud graduate of Computer Science with a major in Cybersecurity, driven by an unwavering passion for technology and an enthusiasm for learning and exploration. 
+          I look forward with excitement to applying my skills in the solving of real-world problems and building complex systems, which has stimulated a special interest in pursuing a challenging and rewarding career in Software Engineering. 
+          I am well-equipped with programming experience in Python, Java, JavaScript, and C++ and deep knowledge of cybersecurity principles that include application security best practices to enable the creation of efficient and secure software solutions.<span class="blinker3" style="font-weight: bold;">|</span>
         </p>
+        
+        <!-- Projects -->
+        <h3 style="color:rgb(255, 255, 255)" id="projects"> <span class="blinker2">> </span>My Projects </h3>
+        <hr style="width:100%; opacity: 80%;">
 
-        <h3 class="w3-text-light-grey" style="margin-top:50px"> <span class="blinker2">> </span>My Projects </h3>
-        <hr style="width:100%" class="w3-opacity">
-
-        <div style="display:flex; flex-wrap: wrap;">
-
+        <div style="display:flex; flex-wrap: wrap; height: 730px; overflow-y: scroll;">
           <!-- Box 1 -->
-          <div style="box-sizing:border-box; width: 450px; height: 600px; flex-wrap: wrap; text-align:center; border-radius:4px; border-style:solid; border-width: 2px; border-color: #959595; padding:10px; margin-top: 10px; margin-bottom:10px; margin-left:auto; margin-right:auto">   
-            <div style="display:flex; flex-wrap: wrap; flex-direction: column; width:100%; height:100%">
-              <span style="font-size: 18px; color:rgb(255, 255, 255);">Restaurant Reservation & Delivery System</span>
-              <div style="margin-top:10px;">
-                <img src="/assets/edibiLogo.png" style="width:40%;">
-                <p style="text-align:left; color:#a8a8a8fc;"> Edibi is a restaurant application (SaaS) that supports both customer reservation and delivery process. </p>
+          <div class="projectBox">   
+            <div class="contentWrapper">
+              <span class="projectTitle">Restaurant Reservation & Delivery System</span>
+              <hr>
+              <div class="projectDescription">
+                <img src="/assets/edibiLogo.png" style="width:40%;" alt="Edibi's Logo">
+                <hr>
+                <p> Edibi is a restaurant application (SaaS) that supports both customer reservation and delivery process. </p>
               </div> 
 
-              <div style="margin-top:auto; width:100%; text-align: left;">
-                <p> Live version for tryouts will be provided soon! </p>
-                <p style="font-weight: bold; color:#00ffff"> C#, ASP.NET MVC, CSS </p>
+              <div class="projectNote">
+                <p class="projectLanguage"> C# (ASP.NET MVC), MySQL, CSS </p>
               </div>
             </div>
           </div>
-
           <!-- Box 2 -->
-          <div style="box-sizing:border-box; width: 450px; height: 600px; flex-wrap: wrap; text-align:center; border-radius:4px; border-style:solid; border-width: 2px; border-color: #959595; padding:10px; margin-top: 10px; margin-bottom:10px; margin-left:auto; margin-right:auto">   
-            <div style="display:flex; flex-wrap: wrap; flex-direction: column; width:100%; height:100%">
-              <span style="font-size: 18px; color:rgb(255, 255, 255);">Research Conference Management System</span>
-              <div style="margin-top:10px;">
-                <img src="/assets/RCMS.jpg" style="width:100%;">
-                <p style="text-align:left; color:#a8a8a8fc;"> A Research Conference Management System for Research Papers. This application implements the CRUD methodology with B-C-E architecture </p>
+          <div class="projectBox">
+            <div class="contentWrapper">
+              <span class="projectTitle">Research Conference Management System</span>
+              <hr>
+              <div class="projectDescription">
+                <img src="/assets/RCMS.jpg" alt="RCMS Preview">
+                <hr>
+                <p> A Research Conference Management System for Research Papers. This application implements the CRUD methodology with B-C-E architecture.</p>
               </div> 
 
-              <div style="margin-top:auto; width:100%; text-align: left;">
-                <p> Live version for tryouts will be provided soon! </p>
-                <p style="font-weight: bold; color:#00ffff"> NodeJS (Express Framework), MySQL, HTML, CSS  </p>
+              <div class="projectNote">
+                <p class="projectLanguage"> NodeJS (Express Framework), MySQL, HTML, CSS  </p>
               </div>
             </div>
           </div>
-
           <!-- Box 3 -->
-          <div style="box-sizing:border-box; width: 450px; height: 600px; flex-wrap: wrap; text-align:center; border-radius:4px; border-style:solid; border-width: 2px; border-color: #959595; padding:10px; margin-top: 10px; margin-bottom:10px; margin-left:auto; margin-right:auto">   
-            <div style="display:flex; flex-wrap: wrap; flex-direction: column; width:100%; height:100%">
-              <span style="font-size: 18px; color:rgb(255, 255, 255);">Intrusion Detection System</span>
-              <div style="margin-top:10px;">
-                <img src="/assets/IDS.jpg" style="width:100%;">
-                <p style="text-align:left; color:#a8a8a8fc;"> An Intrusion Detection System (IDS) that monitors number of events, analyzes events, and produces alerts based on the anomaly threshold. </p>
+          <div class="projectBox">
+            <div class="contentWrapper">
+              <span class="projectTitle">Intrusion Detection System</span>
+              <hr>
+              <div class="projectDescription">
+                <img src="/assets/IDS.jpg" alt="IDS Preview">
+                <hr>
+                <p> An Intrusion Detection System (IDS) that monitors number of events, analyzes events, and produces alerts based on the anomaly threshold. </p>
               </div> 
 
-              <div style="margin-top:auto; width:100%; text-align: left;">
-                <p> Live version for tryouts will be provided soon! </p>
-                <p style="font-weight: bold; color:#00ffff"> Python </p>
+              <div class="projectNote">
+                <p class="projectLanguage"> Python </p>
               </div>
             </div>
           </div>
+          <!-- Box 4 -->
+          <div class="projectBox">
+            <div class="contentWrapper">
+              <span class="projectTitle">University Portal Management System</span>
+              <hr>
+              <div class="projectDescription">
+                <img src="/assets/eduPortal.jpg" alt="eduPortal Preview">
+                <hr>
+                <p> This system provides Students and Lecturers with various academic related functions and multitudes of useful academic information in real-time. </p>
+              </div> 
 
+              <div class="projectNote">
+                <p class="projectLanguage"> PHP, Apache, MySQL </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <h1 style="color: rgba(255, 251, 5, 0.988);">Apologies, site is still under development as more content is getting added. Please come back again!</h1>
+        <!-- Education -->
+        <h3 style="color:rgb(255, 255, 255)" id="education"> <span class="blinker3">| </span>Education and Certifications</h3>
+        <hr style="width:100%; opacity: 80%;">
 
-        <hr style="width:100%" class="w3-opacity">
+        <div style="display:flex; flex-wrap: wrap; overflow-x: scroll; ">
+          <div class="educationBox">
+            <!-- Slot1 -->
+            <div class="contentWrapper">
+              <a href="https://www.uow.edu.au/"><img src="/assets/icons/uow-logo.svg" alt="University of Wollongong Logo"></a>
+              <div class="listItem">
+                <div class="descriptionBox">
+
+                  <div class="title">
+                    Bachelor of Computer Science (Cybersecurity)
+                  </div>
+
+                  <hr>
+                  
+                  <table>
+                    <tr>
+                      <td>
+                        <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                      </td>  
+                      <td style="vertical-align: middle;">
+                        University of Wollongong
+                      </td>
+                    </tr>
+                    <tr >
+                      <td>
+                        <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                      </td>  
+                      <td>
+                        Jan 2021 - Jun 2023
+                      </td>
+                    </tr>
+                    <tr >
+                      <td>
+                        <i class="fa-solid fa-award" aria-hidden="true"></i>
+                      </td>  
+                      <td>
+                        Graduated with Distinction
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                      </td>  
+                      <td>
+                        Singapore - <img src="/assets/icons/sim-logo.svg" class="simLogo" alt="Singapore Institute of Management Logo">
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+
+            </div>
+            <!-- Slot2 -->
+            <div class="contentWrapper">
+              <a href="https://www.psb-academy.edu.sg/"><img src="/assets/icons/psb-logo.svg" alt="PSB Academy Logo"></a>
+
+              <div class="listItem">
+                <div class="descriptionBox">
+
+                  <div class="title">
+                    Diploma in Network Defense and Forensic Countermeasures
+                  </div>
+
+                  <hr>
+                  
+                  <table>
+                    <tr>
+                      <td>
+                        <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                      </td>  
+                      <td>
+                        PSB Academy
+                      </td>
+                    </tr>
+                    <tr >
+                      <td>
+                        <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                      </td>  
+                      <td>
+                        Oct 2019 - Oct 2020
+                      </td>
+                    </tr>
+                    <tr >
+                      <td>
+                        <i class="fa-solid fa-award" aria-hidden="true"></i>
+                      </td>  
+                      <td>
+                        Attained 3 EC-Council Certifications
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                      </td>  
+                      <td>
+                        Singapore
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+
+            </div>
+
+            <hr style="width:100%; opacity: 80%;">
+
+            <div class="contentWrapper2">
+              <div class="certificationCard">
+                <div class="wrapper">
+                  <div class="imgWrapper"><img src="/assets/icons/awsCF.svg" alt="AWS Cloud Foundations"></div>
+                  <hr style="width:100%; opacity: 80%;">
+                  <div>AWS Academy Cloud Foundations</div>
+                  <div class="certificationLink"><a href="https://www.credly.com/badges/4d430177-92ca-4c82-936e-fa78c98accf8">Verify</a></div>
+                </div>
+              </div>
+              <div class="certificationCard">
+                <div class="wrapper">
+                  <div class="imgWrapper"><img src="/assets/icons/CEH.svg" alt="AWS Cloud Foundations"></div>
+                  <hr style="width:100%; opacity: 80%;">
+                  <div>Certified Ethical Hacker</div>
+                  <div class="certificationLink"><a href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=hdmjpahRDxZKf2kdn42udvE5BNXeoVbK2QtpGVhK5p8=">Verify</a></div>
+                </div>
+              </div>
+              <div class="certificationCard">
+                <div class="wrapper">
+                  <div class="imgWrapper"><img src="/assets/icons/CHFI.svg" alt="AWS Cloud Foundations"></div>
+                  <hr style="width:100%; opacity: 80%;">
+                  <div>Certified Hacking and Forensic Investigator</div>
+                  <div class="certificationLink"><a href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=tMrzzzZKTa2IxFmvy3WhywgPWa53RlyGi0G4JfyAfdo=">Verify</a></div>
+                </div>
+              </div>
+              <div class="certificationCard">
+                <div class="wrapper">
+                  <div class="imgWrapper"><img src="/assets/icons/ECSS.svg" alt="AWS Cloud Foundations"></div>
+                  <hr style="width:100%; opacity: 80%;">
+                  <div>Certified Cybersecurity Specialist</div>
+                  <div class="certificationLink"><a href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=lyJZmtZT5TuHHXB0jqoy5lKfEx8Y3mP4SsKo5RCM7lg=">Verify</a></div>
+                </div>
+              </div>
+            </div>
+
+          </div>  
+        </div>
+
+        <!-- Skills -->
+        <h3 style="color:rgb(255, 255, 255)" id="skills"> <span class="blinker4">_ </span>Skills </h3>
+        <hr style="width:100%; opacity: 80%;">
+
+        <div style="display:flex; flex-wrap: wrap; overflow-x: scroll; ">
+          <div class="skillBox">
+            <div class="title">Core Programming</div>
+            <div>
+              <img src="/assets/icons/Python-Dark.svg" alt="Python" title="Python">
+              <img src="/assets/icons/Java-Dark.svg" alt="Java" title="Java">
+              <img src="/assets/icons/CPP.svg" alt="C++" title="C++">
+              <img src="/assets/icons/MySQL-Dark.svg" alt="MySQL" title="MySQL">
+              <img src="/assets/icons/MongoDB.svg" alt="MongoDB" title="MongoDB">
+
+            </div>
+            <div class="title">Web Development</div>
+            <div>
+              <img src="/assets/icons/HTML.svg" alt="HTML" title="HTML">
+              <img src="/assets/icons/CSS.svg" alt="CSS" title="CSS">
+              <img src="/assets/icons/JavaScript.svg" alt="JavaScript" title="JavaScript">
+              <img src="/assets/icons/NodeJS-Dark.svg" alt="NodeJS" title="NodeJS">
+              <img src="/assets/icons/PHP-Dark.svg" alt="PHP" title="PHP">
+              <img src="/assets/icons/Figma-Dark.svg" alt="Figma" title="Figma">
+              <img src="/assets/icons/Firebase-Dark.svg" alt="Google Firebase" title="Google Firebase">
+            </div>
+
+            <div class="title">Cloud Deployment</div>
+            <div>
+              <img src="/assets/icons/Azure-Dark.svg" alt="Microsoft Azure" title="Microsoft Azure">
+              <img src="/assets/icons/Oracle-Cloud.svg" alt="Oracle Cloud" title="Oracle Cloud">
+              <img src="/assets/icons/Alibaba-Cloud.svg" alt="Alibaba Cloud" title="Alibaba Cloud">
+            </div>
+
+            <div class="title">Operating Systems</div>
+            <div>
+              <img src="/assets/icons/Windows-Dark.svg" alt="Microsoft Windows" title="Microsoft Windows">
+              <img src="/assets/icons/Linux-Dark.svg" alt="Linux" title="Linux">
+              <img src="/assets/icons/Ubuntu-Dark.svg" alt="Ubuntu Distro" title="Ubuntu Distro">
+              <img src="/assets/icons/Kali-Dark.svg" alt="Kali Distro" title="Kali Distro">
+            </div>
+
+            <div class="title">Others</div>
+            <div>
+              <img src="/assets/icons/Anaconda-Dark.svg" alt="Anaconda Package Manager" title="Anaconda Package Manager">
+              <img src="/assets/icons/Bash-Dark.svg" alt="Bash" title="Bash">
+              <img src="/assets/icons/Cloudflare-Dark.svg" alt="Cloudflare" title="Cloudflare">
+              <img src="/assets/icons/Docker.svg" alt="Docker" title="Docker">
+              <img src="/assets/icons/Git.svg" alt="Git" title="Git">
+              <img src="/assets/icons/Github-Dark.svg" alt="GitHub" title="GitHub">
+              <img src="/assets/icons/GitLab-Dark.svg" alt="GitLab" title="GitLab">
+              <img src="/assets/icons/Markdown-Dark.svg" alt="Markdown" title="Markdown">
+              <img src="/assets/icons/Photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop">
+              <img src="/assets/icons/Postman.svg" alt="Postman" title="Postman">
+              <img src="/assets/icons/VIM-Dark.svg" alt="Vim" title="Vim">
+              <img src="/assets/icons/VSCode-Dark.svg" alt="Visual Studio Code" title="Visual Studio Code">
+            </div>
+          </div>
+          
+        </div>
 
         <!-- Footer -->
-      <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-        <a href="mailto:marcolee3011ml@gmail.com" class="fa fa-envelope w3-hover-opacity" style="text-decoration: none;"></a> 
-        <a href="https://www.linkedin.com/in/marco3011/" class="fa fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
+      <footer>
+        <a href="mailto:marcolee3011ml@gmail.com" class="fa fa-envelope" style="text-decoration: none;"></a> 
+        <a href="https://www.linkedin.com/in/marco3011/" class="fa fa-linkedin" style="text-decoration: none;"></a>
+        <a href="https://www.instagram.com/marcoo.lee/" class="fa fa-instagram" style="text-decoration: none;"></a>
       <!-- End footer -->
       </footer>
 
